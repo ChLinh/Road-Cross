@@ -48,3 +48,18 @@ void SetConsoleWindow(int width, int height)
 	SMALL_RECT Rect = { 0,0,ConsoleBufferSize.X - 1,ConsoleBufferSize.Y - 1 };
 	SetConsoleWindowInfo(ConsoleHandle, TRUE, &Rect);
 }
+
+void TextColor(short color)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+
+BOOL SetConsoleFontSize(COORD dwFontSize, const wchar_t* fontName) {
+	HANDLE Out = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_FONT_INFOEX info{ sizeof(CONSOLE_FONT_INFOEX) };
+	if (!GetCurrentConsoleFontEx(Out, false, &info))
+		return false;
+	info.dwFontSize = dwFontSize;
+	wcscpy_s(info.FaceName, fontName);
+	return SetCurrentConsoleFontEx(Out, false, &info);
+}
