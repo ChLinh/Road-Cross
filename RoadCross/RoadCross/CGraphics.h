@@ -7,3 +7,8 @@
 using namespace std;
 
 void GotoXY(int, int);
+
+#define MaxHeight_Console 70
+#define MaxWidth_Console 200
+
+void SetConsoleWindow(int witdh = MaxWidth_Console, int height = MaxHeight_Console);
