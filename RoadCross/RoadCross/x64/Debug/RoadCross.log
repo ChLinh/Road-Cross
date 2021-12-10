@@ -1,4 +1,6 @@
 ﻿  Maincpp.cpp
   CGraphics.cpp
+D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(26,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(26,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   Generating Code...
-  RoadCross.vcxproj -> C:\Users\user\Documents\GitHub\Road-Cross\RoadCross\x64\Debug\RoadCross.exe
+  RoadCross.vcxproj -> D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\x64\Debug\RoadCross.exe
