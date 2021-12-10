@@ -1,2 +1,4 @@
-﻿  Maincpp.cpp
+﻿  CObject.cpp
+  CGraphics.cpp
+  Generating Code...
   RoadCross.vcxproj -> D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe
