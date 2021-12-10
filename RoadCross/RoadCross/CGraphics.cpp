@@ -12,6 +12,26 @@ void GotoXY(int x, int y)
 	SetConsoleCursorPosition(ConsoleHanle, coord);
 }
 
+void GotoXY(COORD coord)
+{
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleCursorPosition(ConsoleHandle, coord);
+}
+
+void ClearConsole()
+{
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+
+	GetConsoleScreenBufferInfo(ConsoleHandle, &csbi);
+
+	std::string str(csbi.srWindow.Right + 1, ' ');
+	for (int i = 0; i <= csbi.srWindow.Bottom; i++) {
+		GotoXY(0, i);
+		printf("%s", str.c_str());
+	}
+}
+
 void SetConsoleWindow(int width, int height)
 {
 	HWND consoleWindow = GetConsoleWindow();
