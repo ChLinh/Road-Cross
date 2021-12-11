@@ -1,4 +1,5 @@
 #pragma once
+#include"CGraphics.h"
 #include "CCharacter.h"
 class Object abstract
 {
@@ -14,6 +15,9 @@ public:
 	~Object() {}
 	int Width();
 	int Height();
+	void Draw();
+	void ClearPre();
 	virtual const Character& GetCharacter() = 0;
+	virtual Object* Clone(int, int) = 0;
 };
 

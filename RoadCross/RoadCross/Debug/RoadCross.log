@@ -1,4 +1,8 @@
-﻿  CObject.cpp
+﻿  CCharacter.cpp
+  CObject.cpp
   CGraphics.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   Generating Code...
+  LINK : D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe not found or not built by the last incremental link; performing full link
   RoadCross.vcxproj -> D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe
