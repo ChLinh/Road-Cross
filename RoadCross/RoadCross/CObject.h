@@ -1,4 +1,5 @@
 #pragma once
+#include "CCharacter.h"
 class Object abstract
 {
 private:
@@ -11,5 +12,8 @@ public:
 	Object(bool);
 	Object(int, int, bool dirs = 1);
 	~Object() {}
+	int Width();
+	int Height();
+	virtual const Character& GetCharacter() = 0;
 };
 

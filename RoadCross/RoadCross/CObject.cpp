@@ -16,3 +16,14 @@ Object::Object(int x, int y, bool theDirec)
 	dir = theDirec;
 	preX = -1;
 }
+
+int Object::Width()
+{
+	Character cha = GetCharacter();
+	return cha.Width();
+}
+int Object::Height()
+{
+	Character cha = GetCharacter();
+	return cha.Height();
+}

@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CCharacter.cpp" />
     <ClCompile Include="CObject.cpp" />
     <ClCompile Include="Maincpp.cpp" />
     <ClCompile Include="CGraphics.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CObject.h" />
   </ItemGroup>
