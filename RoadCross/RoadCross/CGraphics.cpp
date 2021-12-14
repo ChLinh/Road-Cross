@@ -63,3 +63,25 @@ BOOL SetConsoleFontSize(COORD dwFontSize, const wchar_t* fontName) {
 	wcscpy_s(info.FaceName, fontName);
 	return SetCurrentConsoleFontEx(Out, false, &info);
 }
+
+COORD GetCursorPosition()
+{
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	COORD pos;
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	if (!GetConsoleScreenBufferInfo(ConsoleHandle, &csbi)) {
+		pos = { 0,0 };
+	}
+
+	pos = csbi.dwCursorPosition;
+	return pos;
+}
+
+SMALL_RECT GetWindowSize()
+{
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	CONSOLE_CURSOR_INFO info;
+	GetConsoleScreenBufferInfo(ConsoleHandle, &csbi);
+	return csbi.srWindow;
+}

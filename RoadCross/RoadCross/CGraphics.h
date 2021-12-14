@@ -23,4 +23,6 @@ void GotoXY(COORD);
 void ClearConsole();
 void SetConsoleWindow(int witdh = MaxWidth_Console, int height = MaxHeight_Console);
 BOOL SetConsoleFontSize(COORD dwFontSize, const wchar_t* fontName);
+SMALL_RECT GetWindowSize();
+COORD GetCursorPosition();
 
