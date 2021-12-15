@@ -85,3 +85,23 @@ SMALL_RECT GetWindowSize()
 	GetConsoleScreenBufferInfo(ConsoleHandle, &csbi);
 	return csbi.srWindow;
 }
+void DrawBoard(void)
+{
+	GotoXY({ Left_Board_Edge , Top_Board_Edge });
+	cout << (char)201;
+	GotoXY({ Right_Board_Edge , Top_Board_Edge });
+	cout << (char)187;
+	GotoXY({ Left_Board_Edge , Bottom_Board_Edge });
+	cout << (char)200;
+	GotoXY({ Right_Board_Edge , Bottom_Board_Edge });
+	cout << (char)188;
+	GotoXY({ Right_Board_Edge + 55, Bottom_Board_Edge - 20 });
+	cout << (char)187;
+	GotoXY({ Right_Board_Edge + 55, Bottom_Board_Edge });
+	cout << (char)188;
+	GotoXY(Left_Board_Edge + 1, Top_Board_Edge);
+	for (short i = Left_Board_Edge + 1; i < Right_Board_Edge; i++)
+	{
+		cout << (char)205;
+	}
+}

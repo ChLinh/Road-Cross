@@ -16,6 +16,10 @@ using namespace std;
 #define Right_Board_Edge  (MaxWidth_Console - Width_OffSet - 1)	
 #define Left_Board_Game 10 
 #define Right_Board_Game Right_Board_Edge
+#define Top_Board_Edge  Height_OffSet	 
+#define Bottom_Board_Edge (MaxHeight_Console - Height_OffSet - 1)-25
+#define Top_Board_Game Top_Board_Edge
+#define Bottom_Board_Game (Bottom_Board_Edge - 0)
 
 void TextColor(short);
 void GotoXY(int, int);
@@ -25,4 +29,4 @@ void SetConsoleWindow(int witdh = MaxWidth_Console, int height = MaxHeight_Conso
 BOOL SetConsoleFontSize(COORD dwFontSize, const wchar_t* fontName);
 SMALL_RECT GetWindowSize();
 COORD GetCursorPosition();
-
+void DrawBoard();
