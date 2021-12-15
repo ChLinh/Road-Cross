@@ -139,15 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CCars.cpp" />
     <ClCompile Include="CCharacter.cpp" />
     <ClCompile Include="CObject.cpp" />
+    <ClCompile Include="CTrucks.cpp" />
+    <ClCompile Include="CVehicals.cpp" />
     <ClCompile Include="Maincpp.cpp" />
     <ClCompile Include="CGraphics.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CCars.h" />
     <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CObject.h" />
+    <ClInclude Include="CTrucks.h" />
+    <ClInclude Include="CVehicals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

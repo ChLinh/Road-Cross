@@ -1,6 +1,7 @@
 #pragma once
 #include"CGraphics.h"
 #include "CCharacter.h"
+
 class Object abstract
 {
 private:
