@@ -2,6 +2,10 @@
 #include"CGraphics.h"
 #include "CCharacter.h"
 
+enum Objects
+{
+	birds, cars,dinos,trucks
+};
 class Object abstract
 {
 private:
@@ -20,5 +24,6 @@ public:
 	void ClearPre();
 	virtual const Character& GetCharacter() = 0;
 	virtual Object* Clone(int, int) = 0;
+	virtual Objects GetShape() = 0;
 };
 

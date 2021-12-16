@@ -139,8 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CAnimal.cpp" />
+    <ClCompile Include="CBirds.cpp" />
     <ClCompile Include="CCars.cpp" />
     <ClCompile Include="CCharacter.cpp" />
+    <ClCompile Include="CDinosaurs.cpp" />
     <ClCompile Include="CObject.cpp" />
     <ClCompile Include="CTrucks.cpp" />
     <ClCompile Include="CVehicals.cpp" />
@@ -148,8 +151,11 @@
     <ClCompile Include="CGraphics.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CAnimal.h" />
+    <ClInclude Include="CBirds.h" />
     <ClInclude Include="CCars.h" />
     <ClInclude Include="CCharacter.h" />
+    <ClInclude Include="CDinosaurs.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CObject.h" />
     <ClInclude Include="CTrucks.h" />

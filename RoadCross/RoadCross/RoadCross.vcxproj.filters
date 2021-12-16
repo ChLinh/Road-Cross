@@ -36,6 +36,15 @@
     <ClCompile Include="CTrucks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CAnimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBirds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDinosaurs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGraphics.h">
@@ -54,6 +63,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CTrucks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CBirds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDinosaurs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
