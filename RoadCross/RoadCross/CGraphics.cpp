@@ -104,4 +104,43 @@ void DrawBoard(void)
 	{
 		cout << (char)205;
 	}
+	GotoXY(Left_Board_Edge + 1, Bottom_Board_Edge);
+	for (short i = Left_Board_Edge + 1; i < Right_Board_Edge; i++)
+	{
+		cout << (char)205;
+	}
+
+	for (short i = Top_Board_Edge + 1; i < Bottom_Board_Edge; i++)
+	{
+		GotoXY({ Left_Board_Edge , i });
+		cout << (char)186;
+	}
+	for (short i = Top_Board_Edge + 1; i < Bottom_Board_Edge; i++)
+	{
+		GotoXY({ Right_Board_Edge , i });
+		cout << (char)186;
+	}
+	for (short i = Right_Board_Edge + 1; i < Right_Board_Edge + 55; i++)
+	{
+		GotoXY({ i, Bottom_Board_Edge - 20 });
+		cout << (char)205;
+	}
+	for (short i = Right_Board_Edge + 1; i < Right_Board_Edge + 55; i++)
+	{
+		GotoXY({ i, Bottom_Board_Edge });
+		cout << (char)205;
+	}
+	for (short i = Bottom_Board_Edge - 20; i < Bottom_Board_Edge; i++)
+	{
+		GotoXY({ Right_Board_Edge + 55, i });
+		cout << (char)186;
+	}
+	ifstream fin("Character\\banhxe.txt");
+	char buf[10000];
+	GotoXY(Left_Board_Edge + 1, Bottom_Board_Edge + 49);
+	while (!fin.eof())
+	{
+		fin.getline(buf, 1000);
+		cout << buf << endl;
+	}
 }

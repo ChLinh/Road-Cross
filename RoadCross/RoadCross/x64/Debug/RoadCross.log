@@ -1,8 +1,15 @@
-﻿  CCharacter.cpp
+﻿  CAnimal.cpp
+  CBirds.cpp
+  CCars.cpp
+  CCharacter.cpp
+  CDinosaurs.cpp
   CObject.cpp
+  CTrucks.cpp
+  CVehicals.cpp
   Maincpp.cpp
   CGraphics.cpp
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\user\Documents\GitHub\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\user\Documents\GitHub\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\user\Documents\GitHub\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(84,22): warning C4101: 'info': unreferenced local variable
   Generating Code...
-  RoadCross.vcxproj -> C:\Users\GF75\Desktop\Road-Cross\RoadCross\x64\Debug\RoadCross.exe
+  RoadCross.vcxproj -> C:\Users\user\Documents\GitHub\Road-Cross\RoadCross\x64\Debug\RoadCross.exe
