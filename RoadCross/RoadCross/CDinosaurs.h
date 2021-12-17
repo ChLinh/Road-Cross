@@ -10,5 +10,8 @@ public:
 	Dinosaurs(int, int, bool);
 	Dinosaurs(bool);
 	~Dinosaurs() {}
+	const Character& GetCharacter() override;
+	Object* Clone(int, int) override;
+	Objects GetShape() override;
 };
 

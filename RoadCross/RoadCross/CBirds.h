@@ -10,4 +10,7 @@ public:
 	Birds(int, int, bool);
 	Birds(bool);
 	~Birds() {}
+	const Character& GetCharacter() override;
+	Object* Clone(int, int) override;
+	Objects GetShape() override;
 };

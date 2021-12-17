@@ -1,5 +1,5 @@
 #include "CCharacter.h"
-
+#define MAX 1024
 
 
 Character::Character(){}
@@ -58,4 +58,19 @@ void Character::Draw(int x, int y, bool shap)
 
 		}
 	}
+}
+
+
+Character::Character(const char* filename)
+{
+	ifstream fin(filename);
+	width = height = 0;
+	char buf[MAX + 1];
+	while (!fin.eof())
+	{
+		fin.getline(buf, MAX);
+		str.push_back(string(buf));
+		height++;
+	}
+	width = str[0].length();
 }
