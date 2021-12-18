@@ -45,6 +45,9 @@
     <ClCompile Include="CDinosaurs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CStopLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGraphics.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CDinosaurs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CStopLight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
