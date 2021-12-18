@@ -9,7 +9,8 @@ using namespace std;
 
 #define MaxHeight_Console 70
 #define MaxWidth_Console 200
-
+#define Height_Console_Menu 23		 
+#define Width_Console_Menu	70	 
 #define Width_OffSet 10
 #define Height_OffSet 4
 #define Left_Board_Edge Width_OffSet		 
