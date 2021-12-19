@@ -6,11 +6,15 @@ class MenuGame {
 private:
 	int _W;
 	int _H;
+	Character Menucha;
 	int PastRow;
 	int CurrRow;
+	int FindMidH();
+	int FindMidW(string);
 public:
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
 	~MenuGame();
+	void ClearMenu();
 };

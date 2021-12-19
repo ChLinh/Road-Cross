@@ -14,6 +14,7 @@ private:
 public:
 	Character();
 	~Character();
+	vector<string>& Get();
 	int Width();
 	int Height();
 	void Draw(int, int, bool shap = true);

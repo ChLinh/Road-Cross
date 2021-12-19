@@ -14,6 +14,10 @@ int Character::Height()
 {
 	return height;
 }
+vector<string>& Character::Get()
+{
+	return str;
+}
 void Character::Draw(int x, int y, bool shap)
 {
 	if (shap)
