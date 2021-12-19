@@ -151,6 +151,7 @@
     <ClCompile Include="Maincpp.cpp" />
     <ClCompile Include="CGraphics.cpp" />
     <ClCompile Include="CMenuGame.cpp" />
+    <ClCompile Include="CLine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAnimal.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="CTrucks.h" />
     <ClInclude Include="CVehicals.h" />
     <ClInclude Include="CMenuGame.h" />
+    <ClInclude Include="CLine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
