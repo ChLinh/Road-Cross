@@ -28,6 +28,7 @@ D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\Ro
 D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(54,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(69,37): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(74,30): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(103,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   CLine.cpp
 D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
   Generating Code...

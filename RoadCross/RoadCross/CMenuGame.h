@@ -17,6 +17,8 @@ private:
 	void Down();
 	void Enter();
 public:
+	void Clear();
+	void Control(char);
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
