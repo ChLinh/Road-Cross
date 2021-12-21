@@ -77,3 +77,19 @@ int MenuGame::FindLongestPos(vector<string> text)
 	}
 	return pos;
 }
+
+void MenuGame::Up()
+{
+	if (CurrRow == 4)
+		return;
+	PastRow = CurrRow;
+	CurrRow--;
+}
+
+void MenuGame::Down()
+{
+	if (CurrRow == Menucha.Height() - 5) return;
+	PastRow = CurrRow;
+	CurrRow++;
+}
+void MenuGame::Enter() {};

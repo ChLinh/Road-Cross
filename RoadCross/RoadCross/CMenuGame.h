@@ -13,6 +13,9 @@ private:
 	int FindMidH();
 	int FindMidW(string);
 	int FindLongestPos(vector<string>);
+	void Up();
+	void Down();
+	void Enter();
 public:
 	MenuGame();
 	MenuGame(int, int);
