@@ -7,14 +7,16 @@ private:
 	int _W;
 	int _H;
 	Character Menucha;
+	Character Guide;
 	int PastRow;
 	int CurrRow;
 	int FindMidH();
 	int FindMidW(string);
+	int FindLongestPos(vector<string>);
 public:
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
-	/*~MenuGame();*/
+	~MenuGame();
 	void ClearMenu();
 };

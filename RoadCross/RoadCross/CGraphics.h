@@ -6,6 +6,15 @@
 #include <iostream>
 using namespace std;
 
+// Moving:
+#pragma region KeyMove
+#define UP 72
+#define DOWN 80
+#define LEFT 75
+#define RIGHT 77
+#define ESC 27
+#define ENTER 13
+#pragma region Size
 
 #define MaxHeight_Console 70
 #define MaxWidth_Console 200

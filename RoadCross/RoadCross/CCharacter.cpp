@@ -78,3 +78,21 @@ Character::Character(const char* filename)
 	}
 	width = str[0].length();
 }
+
+void Character::Set(const char* name)
+{
+	if (!str.empty())
+	{
+		str.clear();
+	}
+	ifstream fin(name);
+	width = height = 0;
+	char buf[MAX + 1];
+	while (!fin.eof())
+	{
+		fin.getline(buf, MAX);
+		str.push_back(string(buf));
+		height++;
+	}
+	width = str[0].length();
+}
