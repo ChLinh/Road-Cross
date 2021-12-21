@@ -3,7 +3,15 @@
 MenuGame::MenuGame() {
 	_H = Height_Console_Menu + 6;
 	_W = Width_Console_Menu;
-	//SetMenu("main");
+	SetMenu("main");
+	PastRow = 3;
+	CurrRow = 4;
+}
+MenuGame::MenuGame(int W, int H)
+{
+	_W = W;
+	_H = H;
+	SetMenu("main");
 	PastRow = 3;
 	CurrRow = 4;
 }
