@@ -2,8 +2,7 @@
 #include"CCharacter.h"
 #include<conio.h>
 #include<time.h>
-class MenuGame 
-{
+class MenuGame {
 private:
 	int _W;
 	int _H;
@@ -18,8 +17,6 @@ private:
 	void Down();
 	void Enter();
 public:
-	void Clear();
-	void Control(char);
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
