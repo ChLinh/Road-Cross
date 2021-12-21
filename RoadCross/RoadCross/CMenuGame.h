@@ -15,6 +15,6 @@ public:
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
-	~MenuGame();
+	/*~MenuGame();*/
 	void ClearMenu();
 };
