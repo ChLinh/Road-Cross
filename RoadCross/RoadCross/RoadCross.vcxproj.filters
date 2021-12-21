@@ -54,6 +54,9 @@
     <ClCompile Include="CLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CPeople.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGraphics.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPeople.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

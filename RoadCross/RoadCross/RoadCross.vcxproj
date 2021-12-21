@@ -145,6 +145,7 @@
     <ClCompile Include="CCharacter.cpp" />
     <ClCompile Include="CDinosaurs.cpp" />
     <ClCompile Include="CObject.cpp" />
+    <ClCompile Include="CPeople.cpp" />
     <ClCompile Include="CStopLight.cpp" />
     <ClCompile Include="CTrucks.cpp" />
     <ClCompile Include="CVehicals.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="CDinosaurs.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CObject.h" />
+    <ClInclude Include="CPeople.h" />
     <ClInclude Include="CStopLight.h" />
     <ClInclude Include="CTrucks.h" />
     <ClInclude Include="CVehicals.h" />

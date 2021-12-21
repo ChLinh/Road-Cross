@@ -28,4 +28,3 @@ public:
 	People();
 	~People();
 };
-
