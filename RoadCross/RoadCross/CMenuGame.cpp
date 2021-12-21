@@ -93,3 +93,60 @@ void MenuGame::Down()
 	CurrRow++;
 }
 void MenuGame::Enter() {};
+void MenuGame::Draw()
+
+{
+	short x, y;
+	vector<string> str = Menucha.Get();
+	for (int row = 0; row < Menucha.Height(); row++)
+	{
+		x = FindMidW(str[row]) - 1;
+		y = FindMidH() + row;
+		GotoXY(x, y);
+		if (CurrRow == row)
+		{
+			printf("->%s", str[row].c_str());
+		}
+		else if (PastRow == row && PastRow != 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else if (row == 1 || row == Menucha.Height() - 1 - 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else if (row == 0 || row == Menucha.Height() - 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else
+		{
+			printf(" %s ", str[row].c_str());
+		}
+	}
+}
+string MenuGame::Slection()
+{
+	CurrRow = 4;
+	PastRow = 3;
+	Draw();
+	while (true)
+	{
+		char ch = toupper(_getch());
+		switch (ch)
+		{
+		case'W':
+		case UP:
+			this->Up();
+			break;
+		case'S':
+		case DOWN:
+			this->Down();
+			break;
+		case ENTER:
+			return Menucha.Get()[CurrRow];
+		}
+		Draw();
+		Sleep(50);
+	}
+}

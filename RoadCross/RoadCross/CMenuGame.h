@@ -21,5 +21,7 @@ public:
 	MenuGame(int, int);
 	void SetMenu(const char*);
 	~MenuGame();
+	void Draw();
+	string Slection();
 	void ClearMenu();
 };
