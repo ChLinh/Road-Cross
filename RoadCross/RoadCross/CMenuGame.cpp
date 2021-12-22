@@ -125,3 +125,43 @@ void MenuGame::Control(char key)
 	case ENTER: this->Enter(); break;
 	}
 }
+void MenuGame::Draw()
+
+{
+	short x, y;
+	vector<string> str = Menucha.Get();
+	for (int row = 0; row < Menucha.Height(); row++)
+	{
+		x = FindMidW(str[row]) - 1;
+		y = FindMidH() + row;
+		GotoXY(x, y);
+		if (CurrRow == row)
+		{
+			printf("->%s", str[row].c_str());
+		}
+		else if (PastRow == row && PastRow != 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else if (row == 1 || row == Menucha.Height() - 1 - 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else if (row == 0 || row == Menucha.Height() - 1)
+		{
+			printf(" %s ", str[row].c_str());
+		}
+		else
+		{
+			printf(" %s ", str[row].c_str());
+		}
+	}
+}
+void MenuGame::DrawGuide()
+{
+	ClearConsole();
+	GotoXY(0, 0);
+	vector<string> str = Guide.Get();
+	for (int row = 0; row < Guide.Height(); row++)
+		printf("%s\n", str[row].c_str());
+}

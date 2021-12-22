@@ -24,4 +24,7 @@ public:
 	void SetMenu(const char*);
 	~MenuGame();
 	void ClearMenu();
+	void Draw();
+	void DrawGuide();
+
 };
