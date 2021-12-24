@@ -22,9 +22,11 @@ public:
 	MenuGame();
 	MenuGame(int, int);
 	void SetMenu(const char*);
+	string Slection();
 	~MenuGame();
 	void ClearMenu();
 	void Draw();
 	void DrawGuide();
+	void ClearGuide();
 
 };

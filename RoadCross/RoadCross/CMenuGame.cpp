@@ -165,3 +165,43 @@ void MenuGame::DrawGuide()
 	for (int row = 0; row < Guide.Height(); row++)
 		printf("%s\n", str[row].c_str());
 }
+void MenuGame::ClearGuide()
+{
+
+	vector<string> str = Guide.Get();
+	GotoXY(0, 0);
+	for (int row = 0; row < Guide.Height(); row++)
+	{
+		string temp = "";
+		int sizes = str[row].length();
+		for (int i = 0; i < sizes; i++)
+			temp += " ";
+		printf("%s\n", temp.c_str());
+	}
+}
+string MenuGame::Slection()
+{
+	CurrRow = 4;
+	PastRow = 3;
+	Draw();
+	while (true)
+	{
+		char ch = toupper(_getch());
+		switch (ch)
+		{
+		case'W':
+		case UP:
+			this->Up();
+			break;
+		case'S':
+		case DOWN:
+			this->Down();
+			break;
+		case ENTER:
+			return Menucha.Get()[CurrRow];
+		}
+		Draw();
+		Sleep(50);
+	}
+}
+
