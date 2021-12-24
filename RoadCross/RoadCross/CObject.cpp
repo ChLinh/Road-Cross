@@ -71,3 +71,36 @@ void Object::SetPos(int x, int y)
 	X = x;
 	Y = y;
 }
+
+void Object::Move()
+{
+
+	Character cha = GetCharacter();
+	int width = cha.Width();
+	COORD pos;
+	if (dir == 1) {
+		if (X + width - 1 < Right_Board_Edge) {
+			preX = X + width - 1;
+		}
+
+		if (X + width - 1 > Left_Board_Game + 1) {
+			X--;
+		}
+		else {
+			X = Right_Board_Game - width + 1;
+		}
+	}
+	else {
+		if (X > Left_Board_Edge) {
+			preX = X;
+		}
+
+		if (X < Right_Board_Game) {
+			X++;
+		}
+		else {
+			X = Left_Board_Game + 1;
+		}
+	}
+
+}

@@ -27,5 +27,6 @@ public:
 	virtual const Character& GetCharacter() = 0;
 	virtual Object* Clone(int, int) = 0;
 	virtual Objects GetShape() = 0;
+	void Move();
 };
 
