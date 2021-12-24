@@ -17,3 +17,28 @@ Line::Line(COORD coord, vector<Object*> v, bool thedir, short SleepTime)
 	else
 		stop = nullptr;
 }
+
+void Line::Located()
+{
+	if (!obj.empty()) {
+		for (int i = 0; i < obj.size(); i++) {
+			delete obj[i];
+			obj[i] = nullptr;
+		}
+		obj.clear();
+	}
+	delete stop;
+	stop = nullptr;
+}
+bool Line::IsInside(const People& people)
+{
+	COORD peoplePos = (const_cast<People&>(people)).GetPos();
+	if (pos.Y <= peoplePos.Y && peoplePos.Y < pos.Y + height)
+		return true;
+	return false;
+}
+
+COORD Line::GetPos()
+{
+	return pos;
+}

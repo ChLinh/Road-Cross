@@ -1,35 +1,5 @@
-﻿  CAnimal.cpp
-  CBirds.cpp
-  CCars.cpp
-  CCharacter.cpp
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CCharacter.cpp(79,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CCharacter.cpp(97,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  CDinosaurs.cpp
-  CObject.cpp
-  CPeople.cpp
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(19,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(35,26): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(51,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(65,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(110,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CPeople.cpp(158,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  CStopLight.cpp
-  CTrucks.cpp
-  CVehicals.cpp
-  Maincpp.cpp
-  CGraphics.cpp
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(84,22): warning C4101: 'info': unreferenced local variable
-  CMenuGame.cpp
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(12,57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(54,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(69,37): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(74,30): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(103,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  CGame.cpp
   CLine.cpp
-D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
   Generating Code...
-  RoadCross.vcxproj -> D:\tai lieu hoc tap\nam 2\oop\final Project\project\real\Road-Cross\RoadCross\x64\Debug\RoadCross.exe
+  RoadCross.vcxproj -> C:\Users\GF75\Desktop\Road-Cross\RoadCross\x64\Debug\RoadCross.exe

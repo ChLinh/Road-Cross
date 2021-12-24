@@ -144,6 +144,7 @@
     <ClCompile Include="CCars.cpp" />
     <ClCompile Include="CCharacter.cpp" />
     <ClCompile Include="CDinosaurs.cpp" />
+    <ClCompile Include="CGame.cpp" />
     <ClCompile Include="CObject.cpp" />
     <ClCompile Include="CPeople.cpp" />
     <ClCompile Include="CStopLight.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="CCars.h" />
     <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CDinosaurs.h" />
+    <ClInclude Include="CGame.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CObject.h" />
     <ClInclude Include="CPeople.h" />
