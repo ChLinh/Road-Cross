@@ -1,10 +1,14 @@
 #pragma once
 #include<vector>
+#include<codecvt>
 #include<iostream>
 #include"CGraphics.h"
+#include<algorithm>
 #include <fstream>
 #include <sstream>
 #include<mutex>
+#include<stdio.h>
+#include<conio.h>
 #include <Windows.h>
 using namespace std;
 static mutex theLock;

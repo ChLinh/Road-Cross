@@ -1,6 +1,9 @@
 #pragma once
 #include"CGraphics.h"
 #include "CCharacter.h"
+#include<functional>
+#include<mutex>
+#include"CPeople.h"
 
 enum Objects
 {

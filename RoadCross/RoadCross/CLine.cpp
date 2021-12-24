@@ -42,3 +42,48 @@ COORD Line::GetPos()
 {
 	return pos;
 }
+void Line::Draw()
+{
+	int n = obj.size();
+
+	if (dir == 0) {
+		if (stop != nullptr)
+			stop->Draw(this->pos.X, this->pos.Y);
+		for (int i = 1; i < n; i++) {
+
+			const short obj_left = obj[i]->GetPos().X;
+			const short obj_right = obj[i]->GetPos().X + obj[i]->Width() - 1;
+			if (Right_Board_Game > obj_left && Right_Board_Game < obj_right) {
+
+				obj[0]->SetPos(Left_Board_Game - (Right_Board_Game - obj_left), obj[1]->GetPos().Y);
+				for_each(obj.begin(), obj.end(), mem_fn(&Object::Draw));
+				return;
+			}
+		}
+
+		obj[0]->SetPos(0, 0);
+		for_each(obj.begin() + 1, obj.end(), mem_fn(&Object::Draw));
+	}
+	else {
+		if (stop != nullptr)
+		{
+			stop->Draw(this->pos.X + width - 3, this->pos.Y);
+		}
+		for (int i = 1; i < n; i++) {
+
+			const short obj_left = obj[i]->GetPos().X;
+			const short obj_right = obj[i]->GetPos().X + obj[i]->Width() - 1;
+
+			if (Left_Board_Game > obj_left && Left_Board_Game < obj_right) {
+
+				obj[0]->SetPos(Right_Board_Game - (Left_Board_Game - obj_left), obj[1]->GetPos().Y);
+				for_each(obj.begin(), obj.end(), mem_fn(&Object::Draw));
+
+				return;
+			}
+		}
+
+		obj[0]->SetPos(0, 0);
+		for_each(obj.begin() + 1, obj.end(), mem_fn(&Object::Draw));
+	}
+}

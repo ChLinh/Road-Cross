@@ -19,6 +19,7 @@ public:
 	Line();
 	Line(COORD, vector<Object*>, bool, short);
 	~Line() {}
+	void Draw();
 	void Located();
 	bool IsInside(const People&);
 	COORD GetPos();
