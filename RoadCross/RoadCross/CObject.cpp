@@ -61,3 +61,13 @@ void Object::ClearPre()
 		cout << " ";
 	}
 }
+COORD Object::GetPos()
+{
+	COORD pos = { X,Y };
+	return pos;
+}
+void Object::SetPos(int x, int y)
+{
+	X = x;
+	Y = y;
+}

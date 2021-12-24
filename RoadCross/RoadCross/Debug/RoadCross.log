@@ -1,4 +1,16 @@
-﻿  CCars.cpp
+﻿  CAnimal.cpp
+  CBirds.cpp
+  CCars.cpp
+  CDinosaurs.cpp
+  CGame.cpp
+  CObject.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   CTrucks.cpp
+  CVehicals.cpp
+  Maincpp.cpp
+  CLine.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(24,21): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   RoadCross.vcxproj -> D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe

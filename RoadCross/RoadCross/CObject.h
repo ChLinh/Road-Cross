@@ -22,6 +22,8 @@ public:
 	int Height();
 	void Draw();
 	void ClearPre();
+	COORD GetPos();
+	void SetPos(int, int);
 	virtual const Character& GetCharacter() = 0;
 	virtual Object* Clone(int, int) = 0;
 	virtual Objects GetShape() = 0;
