@@ -19,6 +19,9 @@ public:
 	Line();
 	Line(COORD, vector<Object*>, bool, short);
 	~Line() {}
+	int Height();
+	void PosUpdate();
+	bool IsImpact(People& people);
 	void Draw();
 	void Located();
 	bool IsInside(const People&);

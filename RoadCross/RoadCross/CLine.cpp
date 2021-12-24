@@ -87,3 +87,43 @@ void Line::Draw()
 		for_each(obj.begin() + 1, obj.end(), mem_fn(&Object::Draw));
 	}
 }
+int Line::Height()
+{
+	return height;
+}
+
+void Line::PosUpdate()
+{
+	int n = obj.size();
+
+	if (stop != nullptr)
+	{
+		stop->UpdateTime();
+
+		if (stop->IsRed())return;
+	}
+	for_each(obj.begin(), obj.end(), mem_fun(&Object::Move));
+}
+
+bool Line::IsImpact(People& people)
+{
+	int n = obj.size();
+	const short people_left = people.GetPos().X;
+	const short people_right = people.GetPos().X + people.Width() - 1;
+
+	for (int i = 0; i < n; i++) {
+
+		const int min_x = obj[i]->GetPos().X;
+		const int max_x = obj[i]->GetPos().X + obj[i]->Width() - 1;
+
+		if (people_left >= min_x && people_left <= max_x) {
+			return true;
+		}
+
+		if (people_right >= min_x && people_right <= max_x) {
+			return true;
+		}
+	}
+
+	return false;
+}
