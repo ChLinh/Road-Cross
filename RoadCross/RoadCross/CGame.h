@@ -13,5 +13,8 @@ private:
 public:
 	vector<string> GetFileName(const char* path);
 	void DrawGame();
+	void UpdatePosPeople(const char MOVING);
+	void UpdatePosObject();
+	bool IsImpact();
 };
 

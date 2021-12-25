@@ -31,6 +31,7 @@ using namespace std;
 #define Top_Board_Game Top_Board_Edge
 #define Bottom_Board_Game (Bottom_Board_Edge - 0)
 
+#define Max_Line 4
 #define BackGround_LightGreen   0x00A0  // background lightgreen
 #define BackGround_LightRed    0x00C0  // background lightred
 
