@@ -96,3 +96,20 @@ void Character::Set(const char* name)
 	}
 	width = str[0].length();
 }
+Character Character::operator+(Character& cha)
+{
+	if (height != cha.height) {
+		return *this;
+	}
+
+	Character Character;
+
+	for (int i = 0; i < height; i++) {
+		Character.str.push_back(str[i] + cha.str[i]);
+	}
+
+	Character.width = width + cha.width;
+	Character.height = height;
+
+	return Character;
+}

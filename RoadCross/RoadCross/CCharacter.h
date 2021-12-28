@@ -26,6 +26,7 @@ public:
 	int Height();
 	void Draw(int, int, bool shap = true);
 	Character(const char* filename);
+	Character operator + (Character&);
 	~Character();
 };
 

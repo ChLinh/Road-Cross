@@ -71,3 +71,46 @@ bool Game::IsImpact()
 
 	return false;
 }
+void Game::DrawLevel()
+{
+	string s = to_string(level);
+	Character cha("Character\\Level.txt");
+
+	for (int i = 0; i < s.size(); i++) {
+		Character temp = Character((string("Character\\") + s[i]).c_str());
+		cha = cha + temp;
+	}
+
+	SMALL_RECT rect = GetWindowSize();
+	int x = (rect.Right + 1 - cha.Width()) / 2;
+	int y = (rect.Bottom + 1 - cha.Height()) / 2;
+
+
+	//TextColor(BACKGROUND_BLACK | FOREGROUND_LIGHTCYAN);
+
+	ClearConsole();
+	cha.Draw(x, y, false);
+
+	Character loading = Character("Character\\Loading.txt");
+	//TextColor(FOREGROUND_YELLOW);
+	for (int i = 0; i < WAITING; i++)
+	{
+		loading.Draw(x - 70 + loading.Width() * i, y + cha.Height() + 1, false);
+		Sleep(100);
+	}
+
+	ClearConsole();
+	//TextColor(BACKGROUND_BLACK | FOREGROUND_WHITE);
+}
+bool Game::IsExistFile(const char* fileName)
+{
+	fstream inFile(fileName);
+
+	if (inFile)
+	{
+		inFile.close();
+		return true;
+	}
+
+	return false;
+}

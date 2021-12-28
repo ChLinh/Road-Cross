@@ -1,14 +1,33 @@
 ﻿  CAnimal.cpp
   CBirds.cpp
   CCars.cpp
+  CCharacter.cpp
   CDinosaurs.cpp
   CGame.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(79,20): warning C4018: '<': signed/unsigned mismatch
   CObject.cpp
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(80,8): warning C4101: 'pos': unreferenced local variable
+  CPeople.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(19,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(35,26): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(51,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(65,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+  CStopLight.cpp
   CTrucks.cpp
   CVehicals.cpp
   Maincpp.cpp
+  CGraphics.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(84,22): warning C4101: 'info': unreferenced local variable
+  CMenuGame.cpp
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(70,20): warning C4018: '<': signed/unsigned mismatch
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(72,15): warning C4018: '<': signed/unsigned mismatch
   CLine.cpp
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(24,21): warning C4018: '<': signed/unsigned mismatch
