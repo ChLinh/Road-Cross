@@ -12,6 +12,7 @@ private:
 	vector<Line> line;
 	People people;
 	int level;
+	int Life;
 public:
 	bool checkin;
 	vector<string> GetFileName(const char* path);
@@ -23,5 +24,7 @@ public:
 	bool IsImpact();
 	bool IsExistFile(const char* fileName);
 	void DrawLevel();
+	void DrawMessage(string type);
+	void DrawCurrentLevel();
 };
 

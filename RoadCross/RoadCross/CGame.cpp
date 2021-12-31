@@ -114,6 +114,53 @@ bool Game::IsExistFile(const char* fileName)
 
 	return false;
 }
+void Game::DrawCurrentLevel()
+{
+	string s = to_string(level);
+	Character cha("Character\\Level.txt");
+	for (int i = 0; i < s.size(); i++) {
+		Character temp = Character((string("Character\\") + s[i]).c_str());
+		cha = cha + temp;
+	}
+	int x = Right_Board_Edge + 1;
+	int y = Bottom_Board_Edge - cha.Height() - 7;
+	cha.Draw(x, y, false);
+	if (Life > 0)
+	{
+		Character life("Character\\People.txt");
+		Character test("Character\\People.txt");
+		for (int i = 1; i < Life; i++)
+		{
+			life = life + test;
+		}
+		life.Draw(x + life.Width() / 2, y + cha.Height() + 1, false);
+	}
+
+}
+void Game::DrawMessage(string type)
+{
+	Character cha;
+	if (type == "lose") {
+		cha = Character("Character\\YOULOSE.txt");
+	}
+	else if (type == "gameover")
+	{
+		cha = Character("Character\\GAMEOVER.txt");
+	}
+	else if (type == "win") {
+		cha = Character("Character\\YOUWIN.txt");
+	}
+
+	SMALL_RECT shape = GetWindowSize();
+	int x = (shape.Right + 1 - cha.Width()) / 2;
+	int y = (shape.Bottom + 1 - cha.Height()) / 2;
+
+	ClearConsole();
+	cha.Draw(x, y, false);
+	Sleep(2500);
+	ClearConsole();
+
+}
 void Game::Init()
 {
 
