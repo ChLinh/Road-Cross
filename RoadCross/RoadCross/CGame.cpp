@@ -233,4 +233,10 @@ void Game::Init()
 	people.SetLive(true);
 	checkin = false;
 }
+bool Game::IsLevelUp()
+{
+	const short people_bot = people.GetPos().Y + people.Height() - 1;
+
+	return people_bot < Height_OffSet + 1 + SIDE_WALK_HEIGHT;
+}
 
