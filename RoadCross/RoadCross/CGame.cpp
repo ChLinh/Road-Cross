@@ -114,3 +114,123 @@ bool Game::IsExistFile(const char* fileName)
 
 	return false;
 }
+void Game::Init()
+{
+
+	int pos;
+	int arr[8] = { 0 };
+	Character cha;
+	short height = Height_OffSet + 1 + SIDE_WALK_HEIGHT + 1;
+
+	srand(static_cast<unsigned>(time(nullptr)));
+	for (int i = 0; i < 8; i++)
+		arr[i] = i % 4;
+
+
+	int n = 0;
+	int x;
+	Object* obj;
+	bool direc;
+	COORD linePos;
+	for (int i = 0; i < 8; i++) {
+
+		n = (MINIMUM + level) + 1;
+		x = rand() % (Right_Board_Game - Left_Board_Game - 1) + (Left_Board_Game + 1);
+		direc = (i % 2 == 0 ? 1 : 0);
+		vector<Object*> v;
+
+		switch (arr[i])
+		{
+		case 1:
+			if (level == 5)
+				n = n - 1;
+			v.push_back(new Cars(0, 0, direc));
+			for (int j = 1; j < n; j++) {
+				obj = new Cars(x, height + 1, direc);
+				v.push_back(obj);
+
+				if (direc == 1) {
+					x += obj->Width() + DISTANCE;
+				}
+				else {
+					x -= obj->Width() + DISTANCE;
+				}
+			}
+
+			linePos = { Left_Board_Game + 1 ,height };
+			line.push_back(Line(linePos, v, direc, SLEEP_TIME));
+			break;
+
+		case 2:
+			v.push_back(new Birds(0, 0, direc));
+
+			for (int j = 1; j < n; j++) {
+				obj = new Birds(x, height + 1, direc);
+				v.push_back(obj);
+
+				if (direc == 1) {
+					x += obj->Width() + DISTANCE;
+				}
+				else {
+					x -= obj->Width() + DISTANCE;
+				}
+			}
+
+			linePos = { Left_Board_Game + 1,height };
+			line.push_back(Line(linePos, v, direc, SLEEP_TIME));
+			break;
+
+		case 3:
+			if (level == 5)
+				n = n - 1;
+			v.push_back(new Trucks(0, 0, direc));
+
+			for (int j = 1; j < n - 1; j++) {
+				obj = new Trucks(x, height + 1, direc);
+				v.push_back(obj);
+
+				if (direc == 1) {
+					x += obj->Width() + DISTANCE;
+				}
+				else {
+					x -= obj->Width() + DISTANCE;
+				}
+			}
+
+			linePos = { Left_Board_Game + 1,height };
+			line.push_back(Line(linePos, v, direc, SLEEP_TIME));
+			break;
+
+		case 0:
+			if (level == 5)
+				n = n - 1;
+			v.push_back(new Dinosaurs(0, 0, direc));
+
+			for (int j = 1; j < n - 1; j++) {
+				obj = new Dinosaurs(x, height + 1, direc);
+				v.push_back(obj);
+
+				if (direc == 1) {
+					x += obj->Width() + DISTANCE;
+				}
+				else {
+					x -= obj->Width() + DISTANCE;
+				}
+			}
+
+			linePos = { Left_Board_Game + 1,height };
+			line.push_back(Line(linePos, v, direc, SLEEP_TIME));
+
+			break;
+
+		}
+
+		height += line[i].Height() + 1;
+		v.clear();
+	}
+
+	people = People((Left_Board_Game + Right_Board_Game) / 2, Bottom_Board_Edge - people.Height());
+	people.SetLive(true);
+	checkin = false;
+}
+

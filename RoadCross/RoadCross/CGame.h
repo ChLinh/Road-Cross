@@ -13,8 +13,10 @@ private:
 	People people;
 	int level;
 public:
+	bool checkin;
 	vector<string> GetFileName(const char* path);
 	void DrawGame();
+	void Init();
 	void UpdatePosPeople(const char MOVING);
 	void UpdatePosObject();
 	bool IsImpact();
