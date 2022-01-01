@@ -113,3 +113,29 @@ Character Character::operator+(Character& cha)
 
 	return Character;
 }
+void Character::Write(ostream& out)
+{
+	out.write((char*)&width, sizeof(width));
+	out.write((char*)&height, sizeof(height));
+	for (int i = 0; i < height; i++)
+	{
+		int length = str[i].length();
+		out.write((char*)&length, sizeof(length));
+		out.write(str[i].c_str(), sizeof(char) * length);
+
+	}
+}
+void Character::Read(istream& in)
+{
+	in.read((char*)&width, sizeof(width));
+	in.read((char*)&height, sizeof(height));
+
+	str.resize(height);
+	int length;
+
+	for (int i = 0; i < height; i++) {
+		in.read((char*)&length, sizeof(length));
+		str[i].resize(length);
+		in.read((char*)&str[i][0], sizeof(char) * length);
+	}
+}

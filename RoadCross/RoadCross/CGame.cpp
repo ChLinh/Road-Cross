@@ -629,3 +629,28 @@ void Game::PauseGame(char text)
 		}
 	}
 }
+
+void Game::ExitGame()
+{
+	ClearConsole();
+	MenuGame m;
+	m.SetMenu("yes_no");
+
+	SMALL_RECT rect = GetWindowSize();
+	int width = rect.Right - rect.Left + 1;
+	int x = (width - strlen("Do you really wanna leave? ")) / 2;
+	int y = (rect.Bottom) / 3 - 5;
+	GotoXY(x, y);
+	cout << "Do you really wanna leave?";
+
+	string select = m.Slection();
+
+	if (select == "NO") {
+		string s(strlen("Do you really wanna leave?"), ' ');
+		GotoXY(x, y);
+		cout << s;
+		return;
+	}
+	Located();
+	quick_exit(EXIT_SUCCESS);
+}

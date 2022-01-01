@@ -31,5 +31,7 @@ public:
 	virtual Object* Clone(int, int) = 0;
 	virtual Objects GetShape() = 0;
 	void Move();
+	void Write(ostream&);
+	void Read(istream&);
 };
 

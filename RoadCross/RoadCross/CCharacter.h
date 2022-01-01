@@ -27,6 +27,8 @@ public:
 	void Draw(int, int, bool shap = true);
 	Character(const char* filename);
 	Character operator + (Character&);
+	void Write(ostream&);
+	void Read(istream&);
 	~Character();
 };
 

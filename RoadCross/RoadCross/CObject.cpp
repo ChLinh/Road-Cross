@@ -104,3 +104,17 @@ void Object::Move()
 	}
 
 }
+void Object::Write(ostream& out)	// luu vi tri cua object(car,truck,animal)
+{
+	out.write((char*)&X, sizeof(X));
+	out.write((char*)&Y, sizeof(Y));
+	out.write((char*)&preX, sizeof(preX));
+	out.write((char*)&dir, sizeof(dir));
+}
+void Object::Read(istream& in)
+{
+	in.read((char*)&X, sizeof(X));
+	in.read((char*)&Y, sizeof(Y));
+	in.read((char*)&preX, sizeof(preX));
+	in.read((char*)&dir, sizeof(dir));
+}
