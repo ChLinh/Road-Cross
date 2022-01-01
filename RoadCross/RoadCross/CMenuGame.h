@@ -28,5 +28,6 @@ public:
 	void Draw();
 	void DrawGuide();
 	void ClearGuide();
-
+	void Write(ostream&);
+	void Read(istream&);
 };

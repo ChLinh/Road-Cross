@@ -204,4 +204,23 @@ string MenuGame::Slection()
 		Sleep(50);
 	}
 }
+void MenuGame::Write(ostream& out)
+{
+	out.write((char*)&_W, sizeof(_W));
+	out.write((char*)&_H, sizeof(_H));
+	Menucha.Write(out);
+	Guide.Write(out);
+	out.write((char*)&PastRow, sizeof(PastRow));
+	out.write((char*)&CurrRow, sizeof(CurrRow));
+}
+
+void MenuGame::Read(istream& in)
+{
+	in.read((char*)&_W, sizeof(_W));
+	in.read((char*)&_H, sizeof(_H));
+	Menucha.Read(in);
+	Guide.Read(in);
+	in.read((char*)&PastRow, sizeof(PastRow));
+	in.read((char*)&CurrRow, sizeof(CurrRow));
+}
 
