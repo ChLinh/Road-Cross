@@ -49,6 +49,7 @@ public:
 	void ResetGame();
 	void PauseGame(char);
 	void ExitGame();
+	void SettingGame();
 	void StartGame();
 
 	void LoadGame();

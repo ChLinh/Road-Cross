@@ -127,3 +127,88 @@ bool Line::IsImpact(People& people)
 
 	return false;
 }
+
+void Line::Write(ostream& outDev)
+{
+	int num;
+	Objects type = obj[0]->GetShape();
+
+	outDev.write((char*)&type, sizeof(type));
+	outDev.write((char*)&width, sizeof(width));
+	outDev.write((char*)&height, sizeof(height));
+	outDev.write((char*)&pos, sizeof(pos));
+	num = obj.size();
+
+	outDev.write((char*)&num, sizeof(num));
+	if (type == cars || type == trucks) {
+		outDev.write((char*)stop, sizeof(StopLight));
+	}
+
+	for (int i = 0; i < num; i++) {
+		obj[i]->Write(outDev);
+	}
+
+	outDev.write((char*)&dir, sizeof(dir));
+	outDev.write((char*)&sleep, sizeof(sleep));
+	outDev.write((char*)&timeCount, sizeof(timeCount));
+}
+
+void Line::Read(istream& inDev)
+{
+	int num;
+	Objects type;
+
+	inDev.read((char*)&type, sizeof(type));
+	inDev.read((char*)&width, sizeof(width));
+	inDev.read((char*)&height, sizeof(height));
+	inDev.read((char*)&pos, sizeof(pos));
+	num = obj.size();
+
+	inDev.read((char*)&num, sizeof(num));
+	obj.resize(num);
+	switch (type)
+	{
+	case birds:
+		for (int i = 0; i < num; i++) {
+			obj[i] = new Birds();
+		}
+
+		stop = nullptr;
+		break;
+	case cars:
+		for (int i = 0; i < num; i++) {
+			obj[i] = new Cars();
+		}
+
+		stop = new StopLight();
+		inDev.read((char*)stop, sizeof(StopLight));
+		break;
+
+	case dinos:
+		for (int i = 0; i < num; i++) {
+			obj[i] = new Dinosaurs();
+		}
+
+		stop = nullptr;
+		break;
+
+	case trucks:
+		for (int i = 0; i < num; i++) {
+			obj[i] = new Trucks();
+		}
+
+		stop = new StopLight();
+		inDev.read((char*)stop, sizeof(StopLight));
+		break;
+	default:
+		break;
+	}
+
+	for (int i = 0; i < num; i++) {
+		obj[i]->Read(inDev);
+	}
+
+	inDev.read((char*)&dir, sizeof(dir));
+	inDev.read((char*)&sleep, sizeof(sleep));
+	inDev.read((char*)&timeCount, sizeof(timeCount));
+}

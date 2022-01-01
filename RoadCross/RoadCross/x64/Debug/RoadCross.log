@@ -1,27 +1,16 @@
-﻿  CAnimal.cpp
-  CBirds.cpp
-  CCars.cpp
-  CCharacter.cpp
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CCharacter.cpp(79,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CCharacter.cpp(97,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CCharacter.cpp(122,31): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  CDinosaurs.cpp
-  CGame.cpp
+﻿  CGame.cpp
   The contents of <filesystem> are available only with C++17 or later.
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(22,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(167,6): warning C4101: 'pos': unreferenced local variable
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(556,9): error C2039: 'LoadGame': is not a member of 'Game'
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.h(14): message : see declaration of 'Game'
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(568,4): error C3861: 'SaveGame': identifier not found
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(582,5): error C3861: 'SaveGame': identifier not found
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(585,11): error C2039: 'LoadGame': is not a member of 'Game'
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.h(14): message : see declaration of 'Game'
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(610,50): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  CLine.cpp
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(47,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(97,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(110,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(641,61): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(739,49): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(741,47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(821,53): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CGame.cpp(823,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Maincpp.cpp
   CMenuGame.cpp
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(12,57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(54,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
@@ -29,20 +18,11 @@ C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(69,37): warni
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(74,30): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(103,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(176,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  CObject.cpp
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CObject.cpp(66,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CObject.cpp(80,8): warning C4101: 'pos': unreferenced local variable
-  CPeople.cpp
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(19,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(35,26): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(51,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(65,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(110,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CPeople.cpp(158,25): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  CTrucks.cpp
-  CVehicals.cpp
-  Maincpp.cpp
+  CLine.cpp
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(47,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(97,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(110,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(140,18): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GF75\Desktop\Road-Cross\RoadCross\RoadCross\CLine.cpp(165,18): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...

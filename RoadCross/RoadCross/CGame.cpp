@@ -796,12 +796,75 @@ void Game::LoadGame()
 	line.resize(num);
 
 	for (int i = 0; i < num; i++) {
-		//line[i].Read(inFile);
+		line[i].Read(inFile);
 	}
 	people.Read(inFile);
-	//menu.Read(inFile);
+	menu.Read(inFile);
 	inFile.read((char*)&checkin, sizeof(checkin));
 
 	inFile.close();
 	ClearConsole();
+}
+void Game::SettingGame()
+{
+	ClearConsole();
+	MenuGame m;
+	m.SetMenu("setting");
+	ClearConsole();
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	CONSOLE_CURSOR_INFO info;
+	GetConsoleScreenBufferInfo(ConsoleHandle, &csbi);
+	int width = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+	int x = (width - 20 - 10 - 20) / 2;
+	int y = (csbi.srWindow.Bottom) / 3 - 5;
+	GotoXY((width - strlen("SETTING LEVEL")) / 2, y - 1);
+	cout << " SETTING LEVEL";
+	GotoXY((width - strlen("Choose LEVEL")) / 2, y);
+	cout << "Choose Level";
+	vector<string> v;
+	v.push_back("Level 1");
+	v.push_back("Level 2");
+	v.push_back("Level 3");
+	v.push_back("Level 4");
+	v.push_back("Level 5");
+	if (!v.empty()) {
+		for (int i = 0; i < v.size(); i++) {
+			GotoXY(x, y + 6 + i);
+			printf("%-20s ", v[i].c_str());
+		}
+	}
+	int x_sel = x - 2;
+	int y_sel = y + 6;
+	GotoXY(x_sel, y_sel);
+	printf("%c", 175);
+	while (true) {
+		char data = _getch();
+		if (!(data == UP || data == DOWN))
+			data = tolower(data);
+		const char ch = data;
+		if (ch == 'w' || ch == UP) {
+			if (y_sel > y + 6) {
+				GotoXY(x_sel, y_sel);
+				cout << " ";
+				y_sel--;
+			}
+		}
+		else if (ch == 's' || ch == DOWN) {
+			if (y_sel < y + 6 + v.size() - 1) {
+				GotoXY(x_sel, y_sel);
+				cout << " ";
+				y_sel++;
+			}
+		}
+		else if (ch == ENTER) {
+			int STAGE = (y_sel - y - 6) + 1;
+			LEVEL = STAGE;
+			break;
+		}
+		GotoXY(x_sel, y_sel);
+		cout << (char)175;
+	}
+	return;
+
 }

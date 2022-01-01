@@ -26,4 +26,6 @@ public:
 	void Located();
 	bool IsInside(const People&);
 	COORD GetPos();
+	void Write(ostream& outDev);
+	void Read(istream& inDev);
 };
