@@ -25,7 +25,11 @@ public:
 	vector<string> GetFileName(const char* path);
 	void DrawGame();
 	void Init();
+	void ThreadFunction();
 	bool IsLevelUp();
+	void LevelUp();
+	void Run();
+	void ResumeGame();
 	void UpdatePosPeople(const char MOVING);
 	void UpdatePosObject();
 	bool IsImpact();
@@ -43,6 +47,8 @@ public:
 	void Located();
 	void ResetGame();
 	void PauseGame(char);
+
+	void StartGame();
 
 };
 

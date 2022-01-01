@@ -286,6 +286,25 @@ bool Game::IsLevelUp()
 
 	return people_bot < Height_OffSet + 1 + SIDE_WALK_HEIGHT;
 }
+void Game::LevelUp()
+{
+	ClearConsole();
+	SuspendThread(t.native_handle());
+	Located();
+	if (level == MAX_LEVEL) {
+		DrawMessage("win");
+		Sleep(1000);
+		level = 1;
+	}
+	else
+		++level;
+	Init();
+	DrawLevel();
+	DrawBoard();
+	DrawCurrentLevel();
+	DrawPeople();
+	ResumeThread(t.native_handle());
+}
 
 void Game::ProcessDead()
 {
@@ -406,6 +425,39 @@ void Game::DrawSeparator()
 		}
 	}
 }
+void Game::ThreadFunction()
+{
+	while (true) {
+
+		UpdatePosObject();
+		checkin = true;
+		lock_guard<mutex>* lock = new lock_guard<mutex>(theLock);
+		DrawSeparator();
+		DrawObject();
+		delete lock;
+		if (IsImpact())
+		{
+			TextColor(4);
+			for (int i = 0; i < WAITING; i++)
+			{
+				people.Draw(false);
+			}
+			people.SetLive(false);
+			try
+			{
+				ProcessDead();
+			}
+			catch (string s)
+			{
+				if (s == "MAIN MENU") checkin = false;
+				return;
+			}
+		}
+		checkin = false;
+		Sleep(SLEEP_TIME);
+	}
+}
+
 
 void Game::ClearBoard() const
 {
@@ -426,7 +478,63 @@ void Game::Located()
 		line.clear();
 	}
 }
+void Game::Run()
+{
+	DrawPeople();
+	t = thread(&Game::ThreadFunction, this);
+	char ch{};
 
+	while (true) {
+		if (!people.IsDied()) {
+			ch = _getch();
+			if (!(ch == UP || ch == LEFT || ch == DOWN || ch == RIGHT))
+				ch = tolower(ch);
+		}
+		else {
+			while (checkin == true);
+			if (people.IsDied())
+			{
+				TerminateThread(t.native_handle(), 0);
+				t.join();
+				ClearConsole();
+				return StartGame();
+			}
+		}
+		if (ch == 'a' || ch == 'd' || ch == 's' || ch == 'w' || ch == UP || ch == LEFT || ch == DOWN || ch == RIGHT) {
+
+			lock_guard<mutex> lock(theLock);
+			UpdatePosPeople(ch);
+			DrawPeople();
+			if (IsLevelUp()) {
+				LevelUp();
+			}
+		}
+		else if (ch == ESC || ch == 't' || ch == 'l') {
+			while (checkin == true);
+			try
+			{
+				PauseGame(ch);
+			}
+			catch (string s)
+			{
+				if (s == "MAIN MENU") {
+					Life = 3;
+					return StartGame();
+				}
+			}
+		}
+		ch = ' ';
+	}
+}
+void Game::ResumeGame()
+{
+	SetConsoleFontSize({ smallFontSizeW, smallFontSizeH }, L"Lucida Console");
+	SetConsoleWindow(MaxWidth_Console + 50, MaxHeight_Console);
+	DrawCurrentLevel();
+	DrawBoard();
+	DrawPeople();
+	ResumeThread(t.native_handle());
+}
 void Game::ResetGame()
 {
 	Located();
