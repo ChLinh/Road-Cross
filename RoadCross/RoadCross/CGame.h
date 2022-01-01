@@ -1,7 +1,12 @@
 #pragma once
-#include "CLine.h"
+#include"CPeople.h"
+#include"CCars.h"
+#include"CTrucks.h"
+#include"CBirds.h"
+#include"CDinosaurs.h"
+#include"CMenuGame.h"
+#include"CLine.h"
 #include <filesystem>
-#include "CPeople.h"
 #include <stdlib.h>
 #define WAITING 10
 using namespace std::experimental::filesystem;
@@ -12,7 +17,9 @@ private:
 	vector<Line> line;
 	People people;
 	int level;
+	MenuGame menu;
 	int Life;
+	thread t;
 public:
 	bool checkin;
 	vector<string> GetFileName(const char* path);
@@ -26,5 +33,16 @@ public:
 	void DrawLevel();
 	void DrawMessage(string type);
 	void DrawCurrentLevel();
+
+	
+	void ProcessDead();
+	void DrawObject();
+	void DrawPeople();
+	void DrawSeparator();
+	void ClearBoard() const;
+	void Located();
+	void ResetGame();
+	void PauseGame(char);
+
 };
 

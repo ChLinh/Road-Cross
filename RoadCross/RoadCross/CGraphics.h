@@ -31,6 +31,12 @@ using namespace std;
 #define Top_Board_Game Top_Board_Edge
 #define Bottom_Board_Game (Bottom_Board_Edge - 0)
 
+#define smallFontSizeW (short)GetSystemMetrics(SM_CXSCREEN)/MaxWidth_Console - 3	 
+#define smallFontSizeH (short)GetSystemMetrics(SM_CYSCREEN)/MaxHeight_Console 	- 3	 
+
+#define bigFontSizeW (short)GetSystemMetrics(SM_CXSCREEN)/Width_Console_Menu  - 10		 
+#define bigFontSizeH (short)GetSystemMetrics(SM_CYSCREEN)/Height_Console_Menu  - 10		
+
 #define DISTANCE 20
 #define SIDE_WALK_HEIGHT 4
 #define SLEEP_TIME 25
