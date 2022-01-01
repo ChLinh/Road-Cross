@@ -8,6 +8,12 @@
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(79,20): warning C4018: '<': signed/unsigned mismatch
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(121,20): warning C4018: '<': signed/unsigned mismatch
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(167,6): warning C4101: 'pos': unreferenced local variable
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(475,21): warning C4018: '<': signed/unsigned mismatch
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(568,4): error C3861: 'SaveGame': identifier not found
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(582,5): error C3861: 'SaveGame': identifier not found
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(721,21): warning C4018: '<': signed/unsigned mismatch
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(747,21): warning C4018: '<': signed/unsigned mismatch
+D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(774,14): warning C4018: '<': signed/unsigned mismatch
   CGraphics.cpp
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
@@ -34,4 +40,3 @@ D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,18): warning C4838: c
   CVehicals.cpp
   Maincpp.cpp
   Generating Code...
-  RoadCross.vcxproj -> D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe

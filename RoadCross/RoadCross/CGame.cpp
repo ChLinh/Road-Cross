@@ -654,3 +654,154 @@ void Game::ExitGame()
 	Located();
 	quick_exit(EXIT_SUCCESS);
 }
+
+void Game::StartGame()
+{
+	char ch;
+	string select;
+	menu = MenuGame();
+	SetConsoleFontSize({ bigFontSizeW, bigFontSizeH }, L"Consolas");
+	SetConsoleWindow(Width_Console_Menu, Height_Console_Menu);
+	ClearConsole();
+
+	while (true)
+	{
+		select = menu.Slection();
+		menu.ClearMenu();
+
+		if (select == "NEW GAME") {
+			SetConsoleFontSize({ smallFontSizeW,smallFontSizeH }, L"Lucida Console");
+			SetConsoleWindow(MaxWidth_Console + 50, MaxHeight_Console);
+			level = LEVEL;
+			DrawLevel();
+			DrawBoard();
+			DrawCurrentLevel();
+			Init();
+			return Run();
+		}
+		else if (select == "GUIDE") {
+			menu.DrawGuide();
+			do
+			{
+				ch = _getch();
+			} while (ch != ENTER);
+			ClearConsole();
+		}
+		else if (select == "SETTING") {
+			//this->SettingGame();
+			ClearConsole();
+		}
+		else if (select == "LOAD GAME") {
+			this->LoadGame();
+			SetConsoleFontSize({ smallFontSizeW,smallFontSizeH }, L"Lucida Console");
+			SetConsoleWindow(MaxWidth_Console + 50, MaxHeight_Console);
+			DrawCurrentLevel();
+			DrawBoard();
+			return Run();
+		}
+		else if (select == "EXIT") {
+			ExitGame();
+		}
+	}
+}
+void Game::LoadGame()
+{
+	char fileName[50];
+	int num;
+	string path = "Saved\\";
+	vector<string> v = GetFileName("Saved");
+	vector<int> lv;
+	vector<tm> time_info;
+	ifstream is;
+
+	if (!v.empty()) {
+		lv.resize(v.size());
+		time_info.resize(v.size());
+
+		for (int i = 0; i < v.size(); i++) {
+			is.open((path + v[i]).c_str(), ios::binary);
+			is.read((char*)&lv[i], sizeof(int));
+			is.read((char*)&time_info[i], sizeof(tm));
+			is.close();
+		}
+	}
+
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	CONSOLE_CURSOR_INFO info;
+
+	GetConsoleScreenBufferInfo(ConsoleHandle, &csbi);
+	int width = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+	int x = (width - 20 - 10 - 20) / 2;
+	int y = (csbi.srWindow.Bottom) / 3 - 5;
+
+
+	GotoXY((width - strlen("LOAD GAME")) / 2, y - 1);
+	cout << "LOAD GAME";
+	GotoXY((width - strlen("Choose data")) / 2, y);
+	cout << "Choose data";
+
+	GotoXY(x, y + 4);
+	printf("%-20s %-10s %-20s", "Name", "Levels", "Date");
+	if (!v.empty()) {
+		for (int i = 0; i < v.size(); i++) {
+			GotoXY(x, y + 6 + i);
+			printf("%-20s %-10d %02d/%02d/%02d %02d:%02d:%02d", v[i].c_str(), lv[i],
+				time_info[i].tm_mday, time_info[i].tm_mon + 1, time_info[i].tm_year + 1903,
+				time_info[i].tm_hour, time_info[i].tm_min, time_info[i].tm_sec);
+		}
+	}
+	int x_sel = x - 2;
+	int y_sel = y + 6;
+
+	GotoXY(x_sel, y_sel);
+	printf("%c", 175);
+	string select;
+
+	while (true) {
+		char data = _getch();
+		if (!(data == UP || data == DOWN))
+			data = tolower(data);
+		const char ch = data;
+		if (ch == 'w' || ch == UP) {
+			if (y_sel > y + 6) {
+				GotoXY(x_sel, y_sel);
+				cout << " ";
+				y_sel--;
+			}
+		}
+		else if (ch == 's' || ch == DOWN) {
+			if (y_sel < y + 6 + v.size() - 1) {
+				GotoXY(x_sel, y_sel);
+				cout << " ";
+				y_sel++;
+			}
+		}
+		else if (ch == ENTER) {
+			path += v[y_sel - y - 6];
+			break;
+		}
+
+		GotoXY(x_sel, y_sel);
+		cout << (char)175;
+	}
+
+	tm tm1;
+	ifstream inFile(path, ios::binary);
+
+	inFile.read((char*)&level, sizeof(level));
+	inFile.read((char*)&tm1, sizeof(tm));
+	inFile.read((char*)&Life, sizeof(Life));
+	inFile.read((char*)&num, sizeof(num));
+	line.resize(num);
+
+	for (int i = 0; i < num; i++) {
+		//line[i].Read(inFile);
+	}
+	people.Read(inFile);
+	//menu.Read(inFile);
+	inFile.read((char*)&checkin, sizeof(checkin));
+
+	inFile.close();
+	ClearConsole();
+}

@@ -14,6 +14,7 @@ using namespace std::experimental::filesystem;
 class Game
 {
 private:
+	static int LEVEL;
 	vector<Line> line;
 	People people;
 	int level;
@@ -50,5 +51,6 @@ public:
 	void ExitGame();
 	void StartGame();
 
+	void LoadGame();
 };
 
