@@ -53,5 +53,7 @@ public:
 	void StartGame();
 
 	void LoadGame();
+	void SaveGame();
+	Game();
 };
 

@@ -1,4 +1,4 @@
-#pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #include<experimental/filesystem>
 #include "CGame.h"
@@ -85,14 +85,10 @@ void Game::DrawLevel()
 	int x = (rect.Right + 1 - cha.Width()) / 2;
 	int y = (rect.Bottom + 1 - cha.Height()) / 2;
 
-
-	//TextColor(BACKGROUND_BLACK | FOREGROUND_LIGHTCYAN);
-
 	ClearConsole();
 	cha.Draw(x, y, false);
 
 	Character loading = Character("Character\\Loading.txt");
-	//TextColor(FOREGROUND_YELLOW);
 	for (int i = 0; i < WAITING; i++)
 	{
 		loading.Draw(x - 70 + loading.Width() * i, y + cha.Height() + 1, false);
@@ -100,7 +96,6 @@ void Game::DrawLevel()
 	}
 
 	ClearConsole();
-	//TextColor(BACKGROUND_BLACK | FOREGROUND_WHITE);
 }
 bool Game::IsExistFile(const char* fileName)
 {
@@ -308,8 +303,6 @@ void Game::LevelUp()
 
 void Game::ProcessDead()
 {
-
-	//if(SOUND)PlaySound("Sound\\sfx_deathscream_human4.wav", NULL, SND_ASYNC);
 	TextColor(7);
 	Sleep(2000);
 	(Life == 0) ? DrawMessage("gameover") : DrawMessage("lose");
@@ -550,7 +543,6 @@ void Game::PauseGame(char text)
 	SetConsoleWindow(Width_Console_Menu, Height_Console_Menu);
 	string select;
 	char ch;
-	//if(SOUND) PlaySound("Sound\\sfx_sounds_pause4_in.wav", NULL, SND_ASYNC);
 	if (text == 'l')
 	{
 		this->LoadGame();
@@ -688,7 +680,7 @@ void Game::StartGame()
 			ClearConsole();
 		}
 		else if (select == "SETTING") {
-			//this->SettingGame();
+			this->SettingGame();
 			ClearConsole();
 		}
 		else if (select == "LOAD GAME") {
@@ -867,4 +859,85 @@ void Game::SettingGame()
 	}
 	return;
 
+}
+void Game::SaveGame()
+{
+	char fileName[51];
+	MenuGame m;
+	string path = "Saved\\";
+
+	HANDLE ConsoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO info;
+
+	SMALL_RECT rect = GetWindowSize();
+	int width = rect.Right - rect.Left + 1;
+	COORD pos;
+	pos.Y = (rect.Bottom) / 3 - 4;
+	pos.X = (width - strlen("File already exists! Overwrite?")) / 2;
+
+	while (true)
+	{
+		GotoXY((width - strlen("Save Game")) / 2, pos.Y - 2);
+		cout << "Save Game";
+		GotoXY(pos.X + strlen("File already exists! Overwrite?") / 4, pos.Y);
+		cout << "Input name to save: ";
+		GotoXY(pos.X + strlen("File already exists! Overwrite?") / 3, pos.Y + 1);
+
+		info.dwSize = 100;
+		info.bVisible = TRUE;
+		SetConsoleCursorInfo(ConsoleHandle, &info);
+		cin.getline(fileName, 50);
+		info.bVisible = FALSE;
+		SetConsoleCursorInfo(ConsoleHandle, &info);
+
+		path += fileName;
+		if (IsExistFile(path.c_str()))
+		{
+			int x = (width - strlen("File already exists! Overwrite?")) / 2;
+			GotoXY(x, pos.Y + 2);
+			cout << "File already exists! Overwrite?";
+			m.SetMenu("yes_no");
+			string select = m.Slection();
+			if (select == "YES") {
+				m.Clear();
+				break;
+			}
+			else {
+				ClearConsole();
+				path = "Saved\\";
+			}
+		}
+		else
+			break;
+	}
+	time_t current_time = time(0);
+	tm* time_info = localtime(&current_time);
+
+	ofstream outFile(path, ios::binary);
+
+	outFile.write((char*)&level, sizeof(level));
+	outFile.write((char*)time_info, sizeof(*time_info));
+	outFile.write((char*)&Life, sizeof(Life));
+	int num = line.size();
+	outFile.write((char*)&num, sizeof(num));
+	for (int i = 0; i < num; i++) {
+		line[i].Write(outFile);
+	}
+
+	people.Write(outFile);
+	menu.Write(outFile);
+	outFile.write((char*)&checkin, sizeof(checkin));
+	outFile.close();
+	GotoXY((width - strlen("Saved!")) / 2, pos.Y + 6);
+	cout << "Saved";
+	GotoXY((width - strlen("Press Enter to back the Menu")) / 2, pos.Y + 7);
+	cout << "Press Enter to back the Menu";
+
+	while (_getch() != ENTER);
+	ClearConsole();
+}
+Game::Game()
+{
+	level = 1;
+	Life = 3;
 }
