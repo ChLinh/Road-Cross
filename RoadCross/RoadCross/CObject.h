@@ -4,6 +4,7 @@
 #include<functional>
 #include<mutex>
 #include"CPeople.h"
+#pragma comment(lib, "Winmm.lib")
 
 enum Objects
 {

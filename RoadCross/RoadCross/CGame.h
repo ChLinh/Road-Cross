@@ -8,7 +8,9 @@
 #include"CLine.h"
 #include <filesystem>
 #include <stdlib.h>
-#define WAITING 10
+#include<thread>
+//#define WAITING 10
+#pragma warning(disable: 4996)
 using namespace std::experimental::filesystem;
 
 class Game

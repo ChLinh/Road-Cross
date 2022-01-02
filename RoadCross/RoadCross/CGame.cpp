@@ -1,8 +1,10 @@
+#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #include<experimental/filesystem>
 #include "CGame.h"
 using namespace std;
+int Game::LEVEL = 1;
 
 vector<string> Game::GetFileName(const char* path)
 {

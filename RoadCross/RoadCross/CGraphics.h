@@ -5,7 +5,8 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+#define LOADING 119
+#define WAITING 10
 // Moving:
 #pragma region KeyMove
 #define UP 72
@@ -47,6 +48,8 @@ using namespace std;
 #define Max_Line 4
 #define BackGround_LightGreen   0x00A0  // background lightgreen
 #define BackGround_LightRed    0x00C0  // background lightred
+
+#pragma endregion
 
 void TextColor(short);
 void GotoXY(int, int);
