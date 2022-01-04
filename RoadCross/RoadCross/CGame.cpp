@@ -700,6 +700,7 @@ void Game::StartGame()
 }
 void Game::LoadGame()
 {
+	ClearConsole();
 	char fileName[50];
 	int num;
 	string path = "Saved\\";

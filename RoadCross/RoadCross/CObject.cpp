@@ -44,11 +44,6 @@ void Object::Draw()
 		if (X + width - 1 < Left_Board_Game) {
 			return;
 		}
-		else if (X < Right_Board_Game && X + width - 1 > Right_Board_Game) {
-			Object* newObj = this->Clone(Left_Board_Game - (Right_Board_Game - X) + 1, Y);
-			newObj->Draw();
-			delete newObj;
-		}
 	}
 	cha.Draw(X, Y);
 }
