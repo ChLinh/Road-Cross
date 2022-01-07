@@ -1,9 +1,4 @@
-﻿  CAnimal.cpp
-  CBirds.cpp
-  CCars.cpp
-  CCharacter.cpp
-  CDinosaurs.cpp
-  CGame.cpp
+﻿  CGame.cpp
   The contents of <filesystem> are available only with C++17 or later.
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(81,20): warning C4018: '<': signed/unsigned mismatch
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(118,20): warning C4018: '<': signed/unsigned mismatch
@@ -18,32 +13,12 @@ D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(827,21): warning C4018: '<'
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(849,14): warning C4018: '<': signed/unsigned mismatch
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(811,22): warning C4101: 'info': unreferenced local variable
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CGame.cpp(879,65): warning C4267: '=': conversion from 'size_t' to 'SHORT', possible loss of data
-  CObject.cpp
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(61,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(61,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CObject.cpp(75,8): warning C4101: 'pos': unreferenced local variable
-  CPeople.cpp
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(19,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(35,26): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(51,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(65,20): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,16): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CPeople.cpp(121,18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-  CStopLight.cpp
-  CTrucks.cpp
-  CVehicals.cpp
-  Maincpp.cpp
-  The contents of <filesystem> are available only with C++17 or later.
-D:\git\Test\Road-Cross\RoadCross\RoadCross\Maincpp.cpp(28,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  CGraphics.cpp
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(46,37): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CGraphics.cpp(84,22): warning C4101: 'info': unreferenced local variable
-  CMenuGame.cpp
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(70,20): warning C4018: '<': signed/unsigned mismatch
-D:\git\Test\Road-Cross\RoadCross\RoadCross\CMenuGame.cpp(72,15): warning C4018: '<': signed/unsigned mismatch
   CLine.cpp
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(16,24): warning C4244: 'argument': conversion from 'short' to 'char', possible loss of data
 D:\git\Test\Road-Cross\RoadCross\RoadCross\CLine.cpp(24,21): warning C4018: '<': signed/unsigned mismatch
+  CStopLight.cpp
+  Maincpp.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+D:\git\Test\Road-Cross\RoadCross\RoadCross\Maincpp.cpp(28,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
   Generating Code...
   RoadCross.vcxproj -> D:\git\Test\Road-Cross\RoadCross\Debug\RoadCross.exe
