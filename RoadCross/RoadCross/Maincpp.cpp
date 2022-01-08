@@ -15,26 +15,9 @@ void ThreadIntro()
 	}
 }
 
-void Exit(thread* t)
-{
-	ClearConsole();
-	t->join();
-}
 void main()
 {
 	thread t1(ThreadIntro);
-	SetConsoleOutputCP(437);
-	char ch;
-	while (1)
-	{
-		Game game;
-		game.StartGame();
-		ch = _getch();
-		if (ch == ENTER)
-		{
-			Exit(&t1);
-			break;
-		}
-	}
-
+	Game game;
+	game.StartGame();
 }
