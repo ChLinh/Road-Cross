@@ -5,10 +5,6 @@
 using namespace std;
 void ThreadIntro()
 {
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = FALSE;
-	info.dwSize = 20;
-	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 	Character cha("Character\\INTRO.txt");
 	int h = cha.Height();
 	while (h > 0)
